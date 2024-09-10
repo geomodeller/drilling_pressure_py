@@ -1,15 +1,15 @@
 
-def pressure_hy_by_kick(k_rho, f_depth_between):
+def pressure_hy_by_kick(kick_density, depth_of_kick):
 
     """
     Calculate the hydraulic pressure due to a kick.
     
     Parameters:
-    k_rho (float): The gas density in ppg.
-    f_depth_between (float): The depth when kick afer go out surface in ft.
+    kick_density (float): The gas density in ppg.
+    depth_of_kick (float): The depth of kick possess in ft.
     
     Returns:
     float: The calculated hydraulic pressure in psi.
     """
-    return 0.052 * k_rho * f_depth_between / 2
+    return 0.052 * kick_density * depth_of_kick
 

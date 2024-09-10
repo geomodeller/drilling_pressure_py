@@ -1,14 +1,15 @@
 
-def reynolds(m_rho, vel, mu_a, d1, d2 = None, is_annulus = True):
+def reynolds(mud_density, vel, mu_a, d1, d2, openhole, is_annulus = True):
     """
-    Calculate the Reynolds number based on the given parameters (choe, 2017).
+    Calculate the Reynolds number based on the given parameters.
 
     Parameters:
-        m_rho (float): The mass density of the fluid in ppg
+        mud_density (float): The mass density of the fluid in ppg
         vel (float): The velocity of the fluid in ft/s
         mu_a (float): The dynamic viscosity of the fluid in cp
         d1 (float): The inner diameter of the pipe in inch
         d2 (float, optional): The outer diameter of the pipe in inch. Defaults to None.
+        openhole (float): The diameter of openhole in inch.
         is_annulus (bool, optional): Flag indicating if the pipe is an annulus. Defaults to True.
 
     Returns:
@@ -16,7 +17,6 @@ def reynolds(m_rho, vel, mu_a, d1, d2 = None, is_annulus = True):
 
 
     Notes:
-        - If `d2` is greater than `d1`, the function swaps the values of `d1` and `d2`.
         - The function calculates the Reynolds number based on the given parameters.
         - The formula used to calculate the Reynolds number depends on the value of `is_annulus`.
         - If `is_annulus` is True, the function calculates the Reynolds number for an annular pipe.
@@ -31,10 +31,7 @@ def reynolds(m_rho, vel, mu_a, d1, d2 = None, is_annulus = True):
         _____
     """
     if is_annulus:
-        if d2 > d1:
-            d1, d2 = d2, d1
-        assert d2 is not None, 'd2 is not input properly'
-        return 928* 0.816 * m_rho*vel*(d2 - d1)/mu_a
+        return 928* 0.816 * mud_density*vel*(openhole - d2)/mu_a
     else:
-        return 928 * m_rho*vel*(d1)/mu_a
+        return 928 * mud_density*vel*(d1)/mu_a
        

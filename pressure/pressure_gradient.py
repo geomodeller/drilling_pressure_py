@@ -1,6 +1,3 @@
-
-
-
 def pressure_gradient_laminar(mu_p, tau_y, vel, openhole, pipe_OD):
   
    """"

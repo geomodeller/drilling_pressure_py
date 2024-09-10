@@ -7,7 +7,7 @@ from pressure.pressure_hy_by_kick import pressure_hy_by_kick
 from eos.compute_gas_density import compute_gas_density
 
 def main():
-    bhp = 7250
+    bhp = 7280
     m_rho = 14
     k_molar_mass = 16.43 ## g*mol^(-1)
     

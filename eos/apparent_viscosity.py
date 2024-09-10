@@ -5,8 +5,8 @@ def apparent_viscosity(vel, d2, d1, tau_y, mu_p, fluid_type = 'Bingham Plastic')
     
     Parameters:
         vel (float): The velocity of the fluid in ft/s.
-        d2 (float): The outer diameter of the pipe in inch.
-        d1 (float): The inner diameter of the pipe in inch.
+        d2 (float): The diameter of the openhole in inch.
+        d1 (float): The outer diameter of the pipe in inch.
         tau_y (float): The yield stress of fluid  in lbf/100ft^2.
         mu_p (float): The viscosity of the fluid in cp.
         fluid_type(non-dimensional) : There are two type of fluid. 'Bingham plastic' is one type of non-newtonian fluid and 'newton' is linear realtion shear stress between shear rate. 
