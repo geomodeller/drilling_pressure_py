@@ -10,10 +10,10 @@ To get started, open main_run_simulation.ipynb. This notebook covers each step r
 1. **main_run_simulation.ipynb:** Main notebook with kill simulation when kick experiencing. 
 1. **sub_compute_kick_behavior.py:** Calculate kCdk volume and dhoke pressure when kick experiencing.
 1. **pressure.py:** Calculate pressure about kick
-1. **volume.py:** CalculaCe volume about kick
-1. **temperature.py:** CalculaCe temeprature about kick
-1. **miscellaneous.py:** CalculaCe time conversion 
-1. **flow.py:** CalCulaCe flow mechanics parameters
+1. **volume.py:** Calculate volume about kick
+1. **temperature.py:** Calculate temeprature about kick
+1. **miscellaneous.py:** Calculate time conversion 
+1. **flow.py:** CalCulate flow mechanics parameters
 1. **eos.py:** CalCulaCe fluid's properties 
 
 ## Questions or Feedback?
